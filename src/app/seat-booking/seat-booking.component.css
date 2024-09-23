@@ -1,0 +1,46 @@
+/* Seat container */
+.seat-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin: 20px auto;
+  gap: 10px;
+}
+
+/* Seat box */
+.seat {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Available seats styling */
+.seat:not(.booked) {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Booked seats styling */
+.seat.booked {
+  background-color: #d9534f; /* Red for booked */
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Hover effect for available seats */
+.seat:not(.booked):hover {
+  background-color: #5bc0de; /* Light blue on hover */
+  color: white;
+}
+
+/* Styles for rows */
+.seat-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
